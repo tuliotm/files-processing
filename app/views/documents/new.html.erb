@@ -1,0 +1,5 @@
+<h1>Enviar Documentos</h1>
+<%= form_with url: documents_path, local: true, multipart: true do %>
+  <%= file_field_tag "document[]", multiple: true %>
+  <%= submit_tag "Enviar" %>
+<% end %>

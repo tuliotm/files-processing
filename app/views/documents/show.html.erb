@@ -1,0 +1,11 @@
+<h1>Relatório do Documento</h1>
+
+<%= form_with url: document_path(@document), method: :get, local: true do %>
+  <%= text_field_tag :nNF, params[:nNF], placeholder: "Número da NF" %>
+  <%= submit_tag "Filtrar" %>
+<% end %>
+
+<% @parsed_data.each do |data| %>
+  <% if params[:nNF].blank? || data[:nNF] == params[:nNF] %>
+  <% end %>
+<% end %>

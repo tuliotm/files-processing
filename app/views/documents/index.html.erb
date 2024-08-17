@@ -1,0 +1,6 @@
+<h1>Meus Documentos</h1>
+<ul>
+  <% @documents.each do |document| %>
+    <li><%= link_to document.filename.to_s, url_for(document) %></li>
+  <% end %>
+</ul>
